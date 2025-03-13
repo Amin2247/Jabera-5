@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jabra Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <nav class="sidebar">
+            <h2>Jabra</h2>
+            <ul>
+                <li onclick="showSection('home')">home</li>
+                <li onclick="showSection('About')">About</li>
+                <li onclick="showSection('system')">System</li>
+                <li onclick="showSection('video')">Video</li>
+                <li onclick="showSection('accessibility')">Accessibility</li>
+                <li onclick="showSection('account')">Account</li>
+            </ul>
+        </nav>
+        <main class="content">
+            <section id="home" class="section active">
+                <h1>Accessibility 1</h1>
+                <button id="startButton">Start Microphone</button>
+                <div class="text-slider-container">
+                <label for="textSlider">Microphone Volume:</label>
+                <input type="range" id="textSlider" min="0" max="100" value="50">
+                <span id="textValue">50</span>
+            </div>
+        </section>
+            <section id="system" class="section">
+                <h1>System</h1>
+                <div class="tabs">
+                    <button onclick="showTab('management')">Management</button>
+                    <button onclick="showTab('devices')">Devices</button>
+                    <button onclick="showTab('certificates')">Certificates</button>
+                    <button onclick="showTab('byod')">Bring Your Own Device</button>
+                </div>
+                <div id="management" class="tab-content active">
+                    <h2>Management</h2>
+                    <p>Room Name</p>
+                    <p>Manual Firmware Update</p>
+                    <p>Firmware Download Site/URL</p>
+                </div>
+                <div id="devices" class="tab-content" style="display: none;">
+                    <h2>Devices</h2>
+                    <p>Devices go here.</p>
+                </div>
+                <div id="certificates" class="tab-content" style="display: none;">
+                    <h2>Certificates</h2>
+                    <p>Certificates go here.</p>
+                </div>
+                <div id="byod" class="tab-content" style="display: none;">
+                    <h2>Bring Your Own Device</h2>
+                    <p>Bring Your Own Device here.</p>
+                </div>
+            </section>
+            <section id="video" class="section">
+                <h2>Slider Example</h2>
+                <div class="slider-container">
+                    <span>0</span> 
+                    <input type="range" id="slider" min="0" max="10" value="5" step="1">
+                    <span>10</span>
+                    </a>
+                </div>
+            </section>
+            <section id="account" class="section">
+                <h1>Account</h1>
+                <div class="tabs">
+                    <button onclick="showTab('access')">Access</button>
+                    <button onclick="showTab('jabra_support')">Jabra Support</button>
+                </div>
+                
+                <div id="access" class="tab-content active">
+                    <h2>Access</h2>
+                    <p>Web Console</p>
+                    <p>Credentials</p>
+                </div>
+                <div id="jabra_support" class="tab-content" style="display: none;">
+                    <h2>Jabra Support</h2>
+                    <p>Support information goes here.</p>
+                </div>
+            </section>
+           <!-- Inside the 'general' section -->
+<section id="general" class="section">
+    <h1>About</h1>
+
+    <div class="form-container">
+        <h2>Room 1</h2>
+        <div class="room">
+            <div class="row">
+                <label for="room1_name">Room name:</label>
+                <input type="text" id="room1_name">
+            </div>
+            <div class="row">
+                <label for="room1_model">Model:</label>
+                <input type="text" id="room1_model">
+            </div>
+            <div class="row">
+                <label for="room1_service">Service provider:</label>
+                <input type="text" id="room1_service">
+            </div>
+            <div class="row">
+                <label for="room1_firmware">Firmware version:</label>
+                <input type="text" id="room1_firmware">
+            </div>
+            <div class="row">
+                <label for="room1_mac">MAC address:</label>
+                <input type="text" id="room1_mac">
+            </div>
+            <div class="row">
+                <label for="room1_ip">IP address:</label>
+                <input type="text" id="room1_ip">
+            </div>
+            <div class="row">
+                <label for="room1_video">Video conferencing:</label>
+                <input type="text" id="room1_video">
+            </div>
+        </div>
+    
+        <h2>Room 2</h2>
+        <div class="room">
+            <div class="row">
+                <label for="room2_name">Room name:</label>
+                <input type="text" id="room2_name">
+            </div>
+            <div class="row">
+                <label for="room2_model">Model:</label>
+                <input type="text" id="room2_model">
+            </div>
+            <div class="row">
+                <label for="room2_service">Service provider:</label>
+                <input type="text" id="room2_service">
+            </div>
+            <div class="row">
+                <label for="room2_firmware">Firmware version:</label>
+                <input type="text" id="room2_firmware">
+            </div>
+            <div class="row">
+                <label for="room2_mac">MAC address:</label>
+                <input type="text" id="room2_mac">
+            </div>
+            <div class="row">
+                <label for="room2_ip">IP address:</label>
+                <input type="text" id="room2_ip">
+            </div>
+            <div class="row">
+                <label for="room2_video">Video conferencing:</label>
+                <input type="text" id="room2_video">
+            </div>
+        </div>
+    </div>    
+    <section id="accessibility" class="section">
+        <h1>Accessibility</h1>
+        <h2>Settings</h2>
+
+        <div class="text-slider-container">
+            <label for="textSlider">Microphone Volume:</label>
+            <input type="range" id="textSlider" min="0" max="100" value="50">
+            <span id="textValue">50</span>
+        
+            <div class="description-container">
+                <p class="description">Suppress constant static noise in the meeting room. Such as a fan or air conditioning. Extreme noise suppression will suppress all background.</p>
+                <button id="volume-btn" class="volume-btn">Normal Recommended</button>
+            </div>
+        </div>
+        
+        <!-- Added inline styles to force visibility of the text -->
+        <div class="microphone-description" style="display: block; padding-top: 10px; font-size: 12px;">
+            <small>Suppress constant static noise in the meeting room. Such as a fan or air conditioning. Extreme noise suppression will suppress all background.</small>
+        </div>
+        
+        <div class="audio-settings">
+            <label for="noise-suppression">Noise suppression</label>
+            <select id="noise-suppression">
+                <option value="normal">Normal (recommended)</option>
+                <option value="extreme">Extreme</option>
+                <option value="off">Off</option>
+            </select>
+        </div>
+        
+        
+        <button class="close-button">Close</button>
+    </section>
+</main>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
+
