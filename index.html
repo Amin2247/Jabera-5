@@ -12,6 +12,7 @@
         <nav class="sidebar">
             <h2>Jabra</h2>
             <ul>
+                <li onclick="showSection('special')">special</li>
                 <li onclick="showSection('home')">home</li>
                 <li onclick="showSection('About')">About</li>
                 <li onclick="showSection('system')">System</li>
@@ -20,6 +21,34 @@
                 <li onclick="showSection('account')">Account</li>
             </ul>
         </nav>
+        <section id="special" class="section">
+            <h1>Special Settings</h1>
+            <div class="slider-container">
+              <label for="microphone-slider">Microphone Volume: </label>
+              <input type="range" id="microphone-slider" min="0" max="100" value="50">
+              <span id="slider-value">50</span>
+              <div class="description-container">
+                <p class="slider-description">
+                  Suppress constant static noise in the meeting room, such as a fan or air conditioning.
+                  Extreme noise suppression will suppress all background noise.
+                </p>
+                <button id="noise-suppression-btn">Normal (Recommended)</button>
+              </div>
+              <div class="text-size-container">
+                <label for="text-size-slider">Text Size:</label>
+                <input type="range" id="text-size-slider" min="10" max="100" value="16">
+                <span id="text-size-value">16</span>
+                <div id="text-display">A</div>
+              </div>  
+              <div class="high-contrast-container">
+                <span class="high-contrast-label">High contrast mode</span>
+                <button id="high-contrast-toggle" class="toggle-button">Off</button>
+              </div>
+              <div class="setting-option">
+                <span>Color Blind Mode</span>
+                <button id="color-blind-toggle" class="toggle-button">Off</button>
+            </div>               
+          </section>     
         <main class="content">
             <section id="home" class="section active">
                 <h1>Accessibility 1</h1>
@@ -161,17 +190,6 @@
             <input type="range" id="textSlider" min="0" max="100" value="50">
             <span id="textValue">50</span>
         
-            <div class="description-container">
-                <p class="description">Suppress constant static noise in the meeting room. Such as a fan or air conditioning. Extreme noise suppression will suppress all background.</p>
-                <button id="volume-btn" class="volume-btn">Normal Recommended</button>
-            </div>
-        </div>
-        
-        <!-- Added inline styles to force visibility of the text -->
-        <div class="microphone-description" style="display: block; padding-top: 10px; font-size: 12px;">
-            <small>Suppress constant static noise in the meeting room. Such as a fan or air conditioning. Extreme noise suppression will suppress all background.</small>
-        </div>
-        
         <div class="audio-settings">
             <label for="noise-suppression">Noise suppression</label>
             <select id="noise-suppression">
@@ -180,7 +198,6 @@
                 <option value="off">Off</option>
             </select>
         </div>
-        
         
         <button class="close-button">Close</button>
     </section>

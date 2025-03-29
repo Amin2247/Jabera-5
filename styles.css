@@ -288,18 +288,6 @@ button:hover {
     justify-content: center;
     margin-top: 20px; /* Space between slider and tabs */
 }
-.description {
-    font-size: 18px;
-    color: #bbb;
-    margin-top: 0px; /* Fine-tune vertical spacing */
-    display: block;
-    text-align: left;
-    padding-left: 10px; /* Matches the label indentation */
-    position: absolute;
-    text-indent: 0ch; /* Moves the first line back */
-    margin-left: 5ch; /* Moves the whole paragraph forward */
-    max-width: 500px; /* Optional, controls text width */
-}
 .mic-container {
     display: flex;
     flex-direction: column;
@@ -486,23 +474,6 @@ input[type="range"]::-moz-range-thumb {
     cursor: pointer;
     text-align: center;
 }
-.description-container {
-    display: flex;
-    align-items: center; /* Aligns the text and button vertically */
-    justify-content: space-between; /* Pushes the button to the right */
-    width: 90%;
-    margin-top: 10px;
-  }
-.description {
-    font-size: 16px;
-    margin-top: 10px;  /* Space between slider and description */
-    line-height: 1.4;  /* Adjust line height for better readability */
-    width: 40%;  /* Set the width of the description */
-    margin-left: left;  /* Center the description horizontally */
-    margin-right: left;  /* Center the description horizontally */
-    text-align: left;  /* Align text to the left */
-    display: block;  /* Ensure description is displayed as a block element */
-}
 volume-btn {
     font-size: 14px;
     padding: 10px 10px;
@@ -544,4 +515,210 @@ volume-btn {
 
 .section.active {
     display: block;
+}
+.volume-btn {
+    font-size: 14px;
+    padding: 10px 10px;
+    background-color: #4CAF50; /* Green background for "Normal Recommended" */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transform: translateY(-85px);  /* Moves the button up by 5px */
+}
+
+.volume-btn:hover {
+    background-color: #45a049; /* Darker green when hovering */
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .slider-container {
+    text-align: center;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  #slider-value {
+    font-weight: bold;
+  }
+  .content {
+    max-width: 800px; /* Adjust this value as needed */
+    margin: 0 auto;
+    padding: 20px; /* Optional: Adds some spacing around the content */
+}
+.section {
+    width: 200%;
+    /* Additional styling as needed */
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+.description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+.slider-container {
+    margin-bottom: 20px;
+  }
+  
+  .slider-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+  }
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  #special {
+    text-align: center;
+  }
+  
+  .slider-container {
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+    width: 60%; /* Adjust this value as needed */
+  }
+  
+  .slider-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
+    white-space: pre-line; /* Ensures text wraps correctly */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limits text to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .description-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  #noise-suppression-btn {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+  }
+  .text-size-control {
+    display: flex;
+    align-items: left;
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 8.5ch; /* Adjust this value to align 'T' under the 'e' in 'Extreme' */
+  }
+  .text-size-wrapper {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: calc(100% + 10px); /* Adjust the 10px value to control vertical spacing */
+    left: 0;
+    transform: translateX(calc(var(--e-position) - var(--t-offset)));
+  }
+  .text-size-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    gap: 20px; /* Adds spacing between elements */
+    left: -2em;
+}
+.text-size-label {
+    white-space: nowrap; /* Prevents the label from wrapping */
+    margin-right: 10px; /* Space between label and slider */
+  }
+  
+  #text-size-slider {
+    flex-grow: 1; /* Allows the slider to fill available space */
+    margin-right: 10px; /* Space between slider and value display */
+
+
+  }
+  
+  #text-size-value {
+    width: 30px; /* Ensures consistent width for alignment */
+    text-align: center;
+  }
+  
+  #text-display {
+    font-size: 16px; /* Initial font size matches the slider's initial value */
+    margin-top: 10px;
+    color: #ffffff;
+  }
+  .high-contrast-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #666;
+  }
+  
+  .high-contrast-label {
+    font-size: 1em;
+    color: #ffffff;
+  }
+  
+  .toggle-button {
+    background-color: #999;
+    border: none;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .toggle-button.on {
+    background-color: yellow;
+    color: black;
+  }
+  .high-contrast #text-display {
+    color: black !important;
+  }
+  .setting-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #555;
+}
+
+.toggle-button {
+    background-color: #ccc;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.toggle-button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Example color-blind mode adjustments */
+.color-blind-mode {
+    filter: grayscale(100%) contrast(120%);
 }
