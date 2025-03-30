@@ -1,0 +1,9 @@
+The special tab in this program includes several customizable features. It offers a microphone slider, 
+allowing users to control microphone sensitivity, and a microphone pitch adjustment to modify the pitch of their voice. 
+Additionally, there is a text slider that enables users to adjust font size dynamically by moving the slider.
+Furthermore, the program provides accessibility options such as high contrast mode and color blindness mode, enhancing usability for individuals with visual impairments.
+This program reads input from a file and dynamically populates a web page with the retrieved data in the About section. 
+The data includes details such as the room number, room name, device model, service provider, firmware 
+version, MAC address, IP address, and video conferencing information. 
+The web page displays information for two different rooms. The initial styles are defined in a CSS file, 
+while additional styles and label names are managed through JavaScript.
