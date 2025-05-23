@@ -129,6 +129,32 @@ input[type="text"] {
     display: flex;
     flex-direction: column;
 }
+/* Default sidebar text color */
+.sidebar ul li {
+    color: black;
+  }
+  
+  /* High contrast mode overrides */
+  .high-contrast {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .high-contrast .high-contrast-label {
+    color: black !important;
+  }
+  
+  .high-contrast .sidebar ul li {
+    color: white !important;
+  }
+  .sidebar h2 {
+    color: black;
+  }
+  
+  /* High contrast: make Jabra black */
+  .high-contrast .sidebar h2 {
+    color: white !important;
+  }
 
 .sidebar h2 {
     text-align: left;
