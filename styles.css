@@ -416,13 +416,29 @@ input[type="range"]::-moz-range-thumb {
 #micVolumeLabel {
     white-space: nowrap; /* Prevents text from breaking into multiple lines */
 }
-.mic-container {
+.mic-slider-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+    align-items: center;
+    gap: 10px; /* Space between label, slider, and value */
+  }
+  
+  .mic-slider-container label {
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  
+  .mic-slider-container input[type="range"] {
+    width: 200px; /* Adjust as needed */
+  }
+  
+#micVolume {
+    width: 200px; /* Adjust width as needed */
 }
 
+#micValue {
+    font-size: 14px;
+    margin-left: 10px;
+}
 .mic-label {
     font-weight: bold;
     font-size: 16px;
