@@ -746,6 +746,40 @@ body {
     background-color: yellow;
     color: black;
   }
+.high-contrast-container,
+.setting-option {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #555;
+  border-top: none;
+  margin-top: 0;
+}
+
+/* Make labels same width */
+.high-contrast-label,
+.setting-option > span {
+  width: 140px;  /* adjust this if needed */
+  display: inline-block;
+  text-align: left;
+  font-size: 1em;
+  color: #d7d7d7;
+}
+
+/* Buttons on the right */
+.toggle-button {
+  background-color: #ccc;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.toggle-button.active {
+  background-color: #4CAF50;
+  color: rgb(4, 4, 4);
+}
+
   .high-contrast #text-display {
     color: black !important;
   }
